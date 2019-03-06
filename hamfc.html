@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hamfc</title>
+</head>
+<body>
+<p> Fahrenheit </p>
+<input id="fahrenheit" type="number"
+       oninput="convert()"
+       onchange="convert()">
+<p> Celsius = <span id="celsius"></span></p>
+<script>
+    function convert() {
+        let f = document.getElementById("fahrenheit").value;
+        let c = (f - 32) / 1.8;
+        document.getElementById("celsius").innerHTML = c;
+    }
+</script>
+</body>
+</html>
